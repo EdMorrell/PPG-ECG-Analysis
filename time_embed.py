@@ -95,8 +95,6 @@ def delay_embed(sig,fs,start=0,stop=50000):
     #Finds predominant peak from spectrogram
     pp = f[np.argmax(Pxx_spec[0:3000])]
 
-    start = 10000
-    stop = 50000
     tau = int(((1/pp)/4)*fs) #Uses 1/4 of period of predominant peak as time lag
     
     #Produces lag signals
